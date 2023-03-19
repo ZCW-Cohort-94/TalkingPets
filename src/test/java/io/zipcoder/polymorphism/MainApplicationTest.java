@@ -15,7 +15,7 @@ public class MainApplicationTest {
         ArrayList<Pet> pets = new ArrayList<Pet>(Arrays.asList(dog, bird, cat));
         String[] names = {"Fido", "Birdie", "Cato"};
 
-        Assert.assertEquals(speak, MainApplication.getUserPetNames(pets));
+        Assert.assertEquals(names, MainApplication.getUserPetNames(pets));
     }
     @Test
     public void testArrayListSpeak(){
@@ -25,6 +25,6 @@ public class MainApplicationTest {
         ArrayList<Pet> pets = new ArrayList<Pet>(Arrays.asList(dog, bird, cat));
         String[] speak = {"Woof!", "Squawk!", "Meow!"};
 
-        Assert.assertEquals(name, MainApplication.getUserPetSpeak(pets));
+        Assert.assertEquals(speak, MainApplication.getUserPetSpeak(pets));
     }
 }

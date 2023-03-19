@@ -6,14 +6,13 @@ import org.junit.Test;
 public class TestCat {
     @Test
     public void testConstructor(){
+        String givenName = "Jake";
         Cat cat = new Cat(givenName);
-        String name = "Jake";
-        cat.setName(name);
-        Assert.assertEquals(name, cat.getName);
+        Assert.assertEquals(givenName, cat.getName());
     }
     @Test
     public void testSpeak(){
-        Cat cat = new Cat();
+        Cat cat = new Cat(null);
         String speakExpected = "Meow!";
         String speakActual = cat.speak();
         Assert.assertEquals(speakExpected, speakActual);
@@ -21,10 +20,10 @@ public class TestCat {
     @Test
     public void testSetName(){
         String givenName = "Jake";
-        Cat cat = new Cat();
-        this.name = cat.getname("James");
+        Cat cat = new Cat(givenName);
+        cat.setName("Max");
 
-        Assert.assertEquals("Max", getName);
+        Assert.assertEquals("Max", cat.getName());
     }
     public void testGetName(){
         String givenName = "Bob";
